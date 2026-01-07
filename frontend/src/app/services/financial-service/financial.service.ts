@@ -3,12 +3,13 @@ import { Injectable } from '@angular/core';
 import { JwtService } from '../jwt-service/jwt.service';
 import { Observable } from 'rxjs';
 import { FinancialSummary } from '../../models/FinancialSummary';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FinancialService {
-  private readonly baseUrl = 'http://localhost:8080/api/financial-summary';
+  private readonly baseUrl = `${environment.apiBaseUrl}/financial-summary`;
 
   constructor(private readonly http: HttpClient,
     private readonly jwtService: JwtService

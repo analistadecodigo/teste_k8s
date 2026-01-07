@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: finance-manager-backend
+  namespace: finance-manager
+spec:
+  selector:
+    app: finance-manager-backend
+  ports:
+    - port: 80
+      targetPort: 8080
+  type: ClusterIP
