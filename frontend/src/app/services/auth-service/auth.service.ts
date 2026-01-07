@@ -4,13 +4,14 @@ import { Observable } from 'rxjs';
 import { AuthResponse } from '../../models/AuthResponse';
 import { RegisterResponse } from '../../models/RegisterResponse';
 import { JwtService } from '../jwt-service/jwt.service';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private readonly baseUrl: string = 'http://localhost:8080/api/auth';
+  private readonly baseUrl: string = `${environment.apiBaseUrl}/auth`;
 
   constructor(private readonly http: HttpClient, private readonly jwtService: JwtService) { }
 

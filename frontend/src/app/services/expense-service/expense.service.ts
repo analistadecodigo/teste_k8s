@@ -4,13 +4,14 @@ import { ExpenseResponse } from '../../models/ExpenseResponse';
 import { Observable } from 'rxjs';
 import { ExpenseRequest } from '../../models/ExpenseRequest';
 import { JwtService } from '../jwt-service/jwt.service';
+import { environment } from '../../../environments/environment';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExpenseService {
-  private readonly baseUrl: string = 'http://localhost:8080/api/expenses';
+  private readonly baseUrl: string = `${environment.apiBaseUrl}/expenses`;
 
   constructor(private readonly http: HttpClient,
     private readonly jwtService: JwtService
