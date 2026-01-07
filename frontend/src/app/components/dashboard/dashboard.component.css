@@ -1,0 +1,37 @@
+.summary-details p {
+  margin-bottom: 8px;
+}
+
+.positive-balance {
+  color: green;
+  font-weight: bold;
+}
+
+.negative-balance {
+  color: red;
+  font-weight: bold;
+}
+
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 64px);
+}
+
+.dashboard-card {
+  max-width: 600px;
+  text-align: center;
+  width: 100%;
+}
+
+.dashboard-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}

@@ -1,0 +1,30 @@
+mat-card {
+  margin: 1rem auto; 
+  text-align: center;
+  max-width: 90%; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+mat-card-header {
+  background-color: var(--mdc-filled-button-container-color); 
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  align-items: center;
+  margin: 1rem 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+mat-card-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+mat-card-content {
+  font-size: 1.5rem;
+}
+
+mat-card-content p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}

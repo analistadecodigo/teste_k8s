@@ -1,0 +1,33 @@
+.item-modal-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  flex: 1;
+  overflow-y: auto;
+}
+
+mat-dialog-content {
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+mat-dialog-actions {
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+h2.mat-dialog-title {
+  padding: 20px;
+  margin: 0;
+  font-size: 1.5em;
+  border-bottom: 1px solid #eee;
+}

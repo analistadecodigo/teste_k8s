@@ -1,0 +1,26 @@
+name: Node Manual Verification
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      execution_mode:
+        description: 'Select execution mode'
+        type: choice
+        default: 'Build Only'
+        options:
+          - 'Build Only'
+          - 'Build + Push to Docker Hub'
+jobs:
+  call-build-frontend:
+    uses: valdirsantos714/reusable_workflows/.github/workflows/build-nodejs.yaml@main
+    with:
+      working-directory: 'frontend'
+      node-version: '20'
+      push-image: ${{ github.event.inputs.execution_mode == 'Build + Push to Docker Hub' }}
+      docker-image-name: finance-manager-frontend
+    secrets:
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}

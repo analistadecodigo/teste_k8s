@@ -1,0 +1,40 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Ajustes para o container do overlay */
+.cdk-overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: 0 auto;
+  z-index: 1000;
+}
+
+/* Alinhamento central do modal */
+/* Alinhar corretamente o overlay */
+.cdk-overlay-pane {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* espaço para o scroll */
+}
+
+/* Diálogo com bordas suaves e centralizado */
+.full-screen-modal .mat-mdc-dialog-surface {
+  background-color: var(--mdc-dialog-container-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  max-height: 90vh;
+}

@@ -1,0 +1,8 @@
+export enum IncomeCategory {
+  BENEFITS = 'BENEFITS',
+  COMMISSION = 'COMMISSION',
+  PAYMENTS = 'PAYMENTS',
+  EARNINGS = 'EARNINGS',
+  SERVICES = 'SERVICES',
+  SALES = 'SALES'
+}
