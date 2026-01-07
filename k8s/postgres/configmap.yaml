@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+  namespace: finance-manager
+data:
+  POSTGRES_DB: finance_manager
+  POSTGRES_USER: postgres
